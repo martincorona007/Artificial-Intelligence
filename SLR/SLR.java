@@ -23,6 +23,7 @@ public class SLR{
             }
             return result;
     }
+    
     public void addData(){
         data_set_x.add(23);
         data_set_x.add(26);
