@@ -12,20 +12,12 @@ public class SLR{
     
     public float wrtBZero(){
             float result=0;
-            for(int i=0;i<ds_X.size();i++){
-                for(int j=0;j<ds_Y.size();j++){
-                    System.out.println("Bzero "+result);
-                }
-            }
+            result=(ds_X.size()*(sumXiYi()))-((sumXi()*sumYi()))/(ds_X.size()*(sumPowerXi()))-(sumXi()*sumXi());
             return result;
     }
     public float wrtBOne(){
             float result=0;
-            for(int i=0;i<ds_X.size();i++){
-                for(int j=0;j<ds_Y.size();j++){
-                    System.out.println("BOne "+result);
-                }
-            }
+            result=sumYi()-(wrtBZero()*sumXi())/ds_X.size();
             return result;
     }
     public int sumXiYi(){
@@ -112,9 +104,9 @@ public static void main(String[]args){
         System.out.println("xy "+obj1.sumXiYi());
         System.out.println("x2 "+obj1.sumPowerXi());
         //obj1.SLR();
-        //dt0=obj1.wrtBZero();
-        //dt1=obj1.wrtBOne();
-        //System.out.println("B0 "+dt0+" B1 "+dt1);
+        dt0=obj1.wrtBZero();
+        dt1=obj1.wrtBOne();
+        System.out.println("B0 "+dt0+" B1 "+dt1);
 }
 
 }
