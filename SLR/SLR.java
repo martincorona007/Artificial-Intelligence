@@ -10,14 +10,25 @@ public class SLR{
             addData();
     }
     
-    public float wrtBZero(){
-            float result=0;
-            result=(ds_X.size()*(sumXiYi()))-((sumXi()*sumYi()))/(ds_X.size()*(sumPowerXi()))-(sumXi()*sumXi());
+    public double wrtBOne(){
+            double result=0;
+            double numerator=0;
+            double denominator=0;
+            //System.out.println("S "+ds_X.size()+" sumXiYi "+sumXiYi()+" sumXi "+sumXi()+" sumYi "+sumYi()+" sumPowerXi "+sumPowerXi());
+            numerator=ds_X.size()*sumXiYi()-((sumXi()*sumYi()));
+            denominator=(ds_X.size()*sumPowerXi())-(sumXi()*sumXi());
+            result=numerator/denominator;
+            
             return result;
     }
-    public float wrtBOne(){
-            float result=0;
-            result=sumYi()-(wrtBZero()*sumXi())/ds_X.size();
+    public double wrtBZero(){
+            double result=0;
+            double numerator=0;
+            double denominator=0;
+            
+            numerator=sumYi()-(wrtBOne()*sumXi());
+            denominator=ds_X.size();
+            result=numerator/denominator;
             return result;
     }
     public int sumXiYi(){
@@ -50,7 +61,31 @@ public class SLR{
         return val;
     }
     public void addData(){
-        ds_X.add(43);
+        ds_X.add(1);
+        ds_X.add(2);
+        ds_X.add(4);
+        ds_X.add(3);
+        ds_X.add(5);
+        
+        ds_Y.add(1);
+        ds_Y.add(3);
+        ds_Y.add(3);
+        ds_Y.add(2);
+        ds_Y.add(5);
+        
+        /*ds_X.add(2);
+        ds_X.add(4);
+        ds_X.add(6);
+        ds_X.add(8);
+        
+        ds_Y.add(3);
+        ds_Y.add(7);
+        ds_Y.add(5);
+        ds_Y.add(10);
+        */
+        
+
+       /* ds_X.add(43);
         ds_X.add(21);
         ds_X.add(25);
         ds_X.add(42);
@@ -62,7 +97,7 @@ public class SLR{
         ds_Y.add(79);
         ds_Y.add(75);
         ds_Y.add(87);
-        ds_Y.add(81);
+        ds_Y.add(81);*/
         /*ds_X.add(1);
         ds_X.add(2);
         ds_X.add(2);
@@ -71,7 +106,8 @@ public class SLR{
         ds_Y.add(1);
         ds_Y.add(2);
         ds_Y.add(3);
-        ds_Y.add(6);*/
+        ds_Y.add(6);
+        */
         /*
         ds_X.add(651);
         ds_X.add(762);
@@ -93,14 +129,16 @@ public class SLR{
         ds_Y.add(57);
         ds_Y.add(58);
         */
+       
     }
 
 public static void main(String[]args){
-        float dt0=0;
-        float dt1=0;
+        double dt0=0;
+        double dt1=0;
+
         SLR obj1=new SLR();
-        System.out.println("y "+obj1.sumYi());
         System.out.println("x "+obj1.sumXi());
+        System.out.println("y "+obj1.sumYi());
         System.out.println("xy "+obj1.sumXiYi());
         System.out.println("x2 "+obj1.sumPowerXi());
         //obj1.SLR();
