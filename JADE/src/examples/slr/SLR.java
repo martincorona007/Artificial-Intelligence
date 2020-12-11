@@ -63,7 +63,7 @@ public class SLR{
         return val;
     }
     public void addData(){
-        ds_X.add(1);
+        /*ds_X.add(1);
         ds_X.add(2);
         ds_X.add(4);
         ds_X.add(3);
@@ -74,7 +74,7 @@ public class SLR{
         ds_Y.add(3);
         ds_Y.add(2);
         ds_Y.add(5);
-        
+        */
         /*ds_X.add(2);
         ds_X.add(4);
         ds_X.add(6);
@@ -110,7 +110,7 @@ public class SLR{
         ds_Y.add(3);
         ds_Y.add(6);
         */
-        /*
+        
         ds_X.add(651);
         ds_X.add(762);
         ds_X.add(856);
@@ -130,7 +130,7 @@ public class SLR{
         ds_Y.add(52);
         ds_Y.add(57);
         ds_Y.add(58);
-        */
+        
        
     }
 /*
