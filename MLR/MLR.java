@@ -19,7 +19,7 @@ public class MLR{
         System.out.println("\t p1 "+p1+" p2 "+p2+" p3 "+p3);*/
         numerator=((sumYi()*sumX2i1()*sumX2i2())+(sumXi1()*sumXi1Xi2()*sumXi2Yi())+(sumXi2()*sumXi1Yi()*sumXi1Xi2()))-((sumXi2Yi()*sumX2i1()*sumXi2())-(sumXi1Xi2()*sumXi1Xi2()*sumYi())-(sumX2i2()*sumXi1Yi()*sumXi1()));
         denominator=DS();
-        System.out.println("\n B0 N "+numerator+" D"+denominator);
+        //System.out.println("\n B0 N "+numerator+" D"+denominator);
         result=numerator/denominator;
         return result;
     }
@@ -28,9 +28,16 @@ public class MLR{
         double result=0;
         double numerator=0;
         double denominator=0;
+        double p1=ds_Xi1.size()*sumXi1Yi()*sumX2i2();
+        double p2=sumYi()*sumXi1Xi2()*sumXi2();
+        double p3=sumXi2()*sumXi1()*sumXi2Yi();
+        System.out.println("\t p1 "+p1+" p2 "+p2+" p3 "+p3);
+        //double p1=(ds_Xi1.size()*sumXi1Yi()*sumX2i2())+(sumYi()*sumXi1Xi2()*sumXi2())+(sumXi2()*sumXi1()*sumXi2Yi());
+        //double p2=(sumXi2()*sumXi1Yi()*sumXi2())-(sumXi2Yi()*sumXi1Xi2()*ds_Xi1.size())-(sumX2i2()*sumXi1()*sumYi());
+        //System.out.println("\t p1 "+p1+" p2 "+p2);
         numerator=((ds_Xi1.size()*sumXi1Yi()*sumX2i2())+(sumYi()*sumXi1Xi2()*sumXi2())+(sumXi2()*sumXi1()*sumXi2Yi()))-((sumXi2()*sumXi1Yi()*sumXi2())-(sumXi2Yi()*sumXi1Xi2()*ds_Xi1.size())-(sumX2i2()*sumXi1()*sumYi()));
         denominator=DS();
-        System.out.println("\n B1 N "+numerator+" D"+denominator);
+        System.out.println("\n B1 N "+numerator+" D "+denominator);
         result=numerator/denominator;
         return result;
     }
@@ -40,7 +47,7 @@ public class MLR{
         double denominator=0;
         numerator=((ds_Xi1.size()*sumX2i1()*sumX2i2())+(sumXi1()*sumXi1Xi2()*sumXi2())+(sumXi2()*sumXi1()*sumXi1Xi2()))-((sumXi2()*sumX2i1()*sumYi())-(sumXi1Xi2()*sumXi1Yi()*ds_Xi1.size())-(sumXi2Yi()*sumXi1()*sumXi1()));
         denominator=DS();
-        System.out.println("\n B2 N "+numerator+" D"+denominator);
+       // System.out.println("\n B2 N "+numerator+" D"+denominator);
         result=numerator/denominator;
         return result;
     }
