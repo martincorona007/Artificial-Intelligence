@@ -13,11 +13,7 @@ public class MLR{
         double result=0;
         double numerator=0;
         double denominator=0;
-        /*double p3=(sumYi()*sumX2i1()*sumX2i2());
-        double p1=(sumYi()*sumX2i1()*sumX2i2())+(sumXi1()*sumXi1Xi2()*sumXi2Yi())+(sumXi2()*sumXi1Yi()*sumXi1Xi2());
-        double p2=(sumXi2Yi()*sumX2i1()*sumXi2())-(sumXi1Xi2()*sumXi1Xi2()*sumYi())-(sumX2i2()*sumXi1Yi()*sumXi1());
-        System.out.println("\t p1 "+p1+" p2 "+p2+" p3 "+p3);*/
-        numerator=((sumYi()*sumX2i1()*sumX2i2())+(sumXi1()*sumXi1Xi2()*sumXi2Yi())+(sumXi2()*sumXi1Yi()*sumXi1Xi2()))-((sumXi2Yi()*sumX2i1()*sumXi2())-(sumXi1Xi2()*sumXi1Xi2()*sumYi())-(sumX2i2()*sumXi1Yi()*sumXi1()));
+        numerator=((sumYi()*sumX2i1()*sumX2i2())+(sumXi1()*sumXi1Xi2()*sumXi2Yi())+(sumXi2()*sumXi1Yi()*sumXi1Xi2()))-((sumXi2Yi()*sumX2i1()*sumXi2())+(sumXi1Xi2()*sumXi1Xi2()*sumYi())+(sumX2i2()*sumXi1Yi()*sumXi1()));
         denominator=DS();
         //System.out.println("\n B0 N "+numerator+" D"+denominator);
         result=numerator/denominator;
@@ -28,16 +24,9 @@ public class MLR{
         double result=0;
         double numerator=0;
         double denominator=0;
-        double p1=ds_Xi1.size()*sumXi1Yi()*sumX2i2();
-        double p2=sumYi()*sumXi1Xi2()*sumXi2();
-        double p3=sumXi2()*sumXi1()*sumXi2Yi();
-        System.out.println("\t p1 "+p1+" p2 "+p2+" p3 "+p3);
-        //double p1=(ds_Xi1.size()*sumXi1Yi()*sumX2i2())+(sumYi()*sumXi1Xi2()*sumXi2())+(sumXi2()*sumXi1()*sumXi2Yi());
-        //double p2=(sumXi2()*sumXi1Yi()*sumXi2())-(sumXi2Yi()*sumXi1Xi2()*ds_Xi1.size())-(sumX2i2()*sumXi1()*sumYi());
-        //System.out.println("\t p1 "+p1+" p2 "+p2);
-        numerator=((ds_Xi1.size()*sumXi1Yi()*sumX2i2())+(sumYi()*sumXi1Xi2()*sumXi2())+(sumXi2()*sumXi1()*sumXi2Yi()))-((sumXi2()*sumXi1Yi()*sumXi2())-(sumXi2Yi()*sumXi1Xi2()*ds_Xi1.size())-(sumX2i2()*sumXi1()*sumYi()));
+        numerator=((ds_Xi1.size()*sumXi1Yi()*sumX2i2())+(sumYi()*sumXi1Xi2()*sumXi2())+(sumXi2()*sumXi1()*sumXi2Yi()))-((sumXi2()*sumXi1Yi()*sumXi2())+(sumXi2Yi()*sumXi1Xi2()*ds_Xi1.size())+(sumX2i2()*sumXi1()*sumYi()));
         denominator=DS();
-        System.out.println("\n B1 N "+numerator+" D "+denominator);
+        //System.out.println("\n B1 N "+numerator+" D "+denominator);
         result=numerator/denominator;
         return result;
     }
@@ -45,19 +34,14 @@ public class MLR{
         double result=0;
         double numerator=0;
         double denominator=0;
-        numerator=((ds_Xi1.size()*sumX2i1()*sumX2i2())+(sumXi1()*sumXi1Xi2()*sumXi2())+(sumXi2()*sumXi1()*sumXi1Xi2()))-((sumXi2()*sumX2i1()*sumYi())-(sumXi1Xi2()*sumXi1Yi()*ds_Xi1.size())-(sumXi2Yi()*sumXi1()*sumXi1()));
+        numerator=((ds_Xi1.size()*sumX2i1()*sumXi2Yi())+(sumXi1()*sumXi1Yi()*sumXi2())+(sumYi()*sumXi1()*sumXi1Xi2()))-((sumXi2()*sumX2i1()*sumYi())+(sumXi1Xi2()*sumXi1Yi()*ds_Xi1.size())+(sumXi2Yi()*sumXi1()*sumXi1()));
         denominator=DS();
-       // System.out.println("\n B2 N "+numerator+" D"+denominator);
         result=numerator/denominator;
         return result;
     }
     //determinat of the system
     public double DS(){
-        //double p1=(ds_Xi1.size()*sumX2i1()*sumX2i2())+(sumXi1()*sumXi1Xi2()*sumXi2())+(sumXi2()*sumXi1()*sumXi1Xi2());
-        //double p2=(sumXi2()*sumX2i1()*sumXi2())-(sumXi1Xi2()*sumXi1Xi2()*ds_Xi1.size())-(sumX2i2()*sumXi1()*sumXi1());
-        //double p3=p1-p2;
-        //System.out.println("Determinat p1 "+p1+" p2 "+p2+" p3 "+p3);
-        return ((ds_Xi1.size()*sumX2i1()*sumX2i2())+(sumXi1()*sumXi1Xi2()*sumXi2())+(sumXi2()*sumXi1()*sumXi1Xi2()))-((sumXi2()*sumX2i1()*sumXi2())-(sumXi1Xi2()*sumXi1Xi2()*ds_Xi1.size())-(sumX2i2()*sumXi1()*sumXi1()));
+        return ((ds_Xi1.size()*sumX2i1()*sumX2i2())+(sumXi1()*sumXi1Xi2()*sumXi2())+(sumXi2()*sumXi1()*sumXi1Xi2()))-((sumXi2()*sumX2i1()*sumXi2())+(sumXi1Xi2()*sumXi1Xi2()*ds_Xi1.size())+(sumX2i2()*sumXi1()*sumXi1()));
     }
     public double sumX2i1(){
         double val=0;
