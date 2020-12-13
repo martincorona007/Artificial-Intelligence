@@ -1,21 +1,29 @@
 public class Population{
-    Individual[] individual;
+    Individual[] population;//array of objects A1 A2 A3
+    Individual individual;//A1={0,1,0,0,1} A2={0,1,0,0,1} A3={0,1,0,0,1}
     private int populationFitness;
     
-    public Population(int sizePopulation){
-        individual =new Individual[sizePopulation];
+    public Population(int sizePopulation,int lengthChromosome) {
+        population =new Individual[sizePopulation];
+        for(int i=0;i<sizePopulation;i++){
+            individual=new Individual(lengthChromosome);
+            population[i]=individual;
+        }
     }
-    public int getPopulationFitness(){
+    /*public int getPopulationFitness(){
         int count_Popu=0;
-        for(int i=0;i<individual.length;i++){
-            if(individual[i]==1){
+        for(int i=0;i<population.length;i++){
+
                 count_Popu++;
-            }
+
         }
         return count_Popu;
+    }*/
+  /*  public Individual getIndividual(){
+        
+
     }
-
-
+*/
 
 
 
@@ -30,9 +38,7 @@ public class Population{
     public void setPopulationFitness(){
 
     }
-    public int getIndividual(){
-
-    }
+    
     public int getFitness(){
 
     }
