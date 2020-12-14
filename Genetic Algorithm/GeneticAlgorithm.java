@@ -9,13 +9,22 @@ public class GeneticAlgorithm{
         mutationRate=mutationRate;
         crossoverRate=crossoverRate;
         elitismCount=elitismCount;
+        setPopulationSize(populationSize);
     }
     public Population initChromosomeLength(int n){
-        Population obj_pop= new  Population(populationSize,n);
+        Population obj_pop= new  Population(getPopulationSize(),n);
         return obj_pop;
     }
-    public void evaluatePopulation(){
-
+    public boolean evaluatePopulation(){
+        Population obj=new Population();
+        //return obj.maxOne();
+        return true;
+    }
+    public void setPopulationSize(int s){
+        populationSize=s;
+    }
+    public int getPopulationSize(){
+        return populationSize;
     }
     
     

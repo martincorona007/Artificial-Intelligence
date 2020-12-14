@@ -9,15 +9,34 @@ public class Population{
             individual=new Individual(lengthChromosome);
             population[i]=individual;
         }
+
     }
-    /*public int getPopulationFitness(){
+    public Population(){
+
+    }
+    public int getPopulationFitness(){
         int count_Popu=0;
         for(int i=0;i<population.length;i++){
-
-                count_Popu++;
-
+            count_Popu+=individual.getChromosomeFitness();
         }
         return count_Popu;
+    }
+    public void setPopulationFitness(){
+        populationFitness=getPopulationFitness();
+    }
+    public boolean maxOne(){
+        boolean flag =false;
+        for(int i=0;i<population.length;i++){
+            if(population[i].getChromosomeFitness()==population.length){
+                flag = true;
+            }
+        }
+        return flag;
+    }/*
+    public void print(){
+        for(int i=0;i<population.length;i++){
+            System.out.println("pop "+population[i].toString());
+        }
     }*/
   /*  public Individual getIndividual(){
         
@@ -35,9 +54,7 @@ public class Population{
     /*public void setIndividual(){
 
     }
-    public void setPopulationFitness(){
 
-    }
     
     public int getFitness(){
 
