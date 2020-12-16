@@ -20,6 +20,4 @@ Inside JADE folder.
 
 ## Representation ##
 
-![Uploading Screenshot from 2020-12-16 12-52-31 (copy).png…]()
-![Uploading Screenshot from 2020-12-16 12-52-31 (another copy).png…]()
 
