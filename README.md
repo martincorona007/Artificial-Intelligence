@@ -2,6 +2,12 @@
 
 ## How to compile ##
 
+## SLR ##
+1. ```javac SLR.java```
+2. ```java SLR```
+## MLR ##
+1. ```javac MLR.java```
+2. ```java MLR```
 ## SLR with JADE ##
 Inside JADE folder.
 1. ```javac -cp lib/jade.jar  src/examples/slr/SLR.java src/examples/slr/SLRAgent.java src/examples/slr/SLRGui.java -d classes/```
