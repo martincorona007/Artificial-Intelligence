@@ -19,5 +19,7 @@ Inside JADE folder.
 2. ```java -cp lib/jade.jar:classes/ jade.Boot -gui boki:examples.mlr.MLRAgent```
 
 ## Representation ##
+![Screenshot from 2020-12-16 12-52-31 (copy)](https://user-images.githubusercontent.com/31390537/102525833-70e49a00-4060-11eb-8b30-6ebb49a376ec.png)
+![Screenshot from 2020-12-16 12-52-31 (another copy)](https://user-images.githubusercontent.com/31390537/102525860-7b069880-4060-11eb-8701-8cd21d62150f.png)
 
 
