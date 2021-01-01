@@ -10,24 +10,28 @@ public class SLR{
             addData();
     }
     
-    public double wrtBOne(){
-            double result=0;
-            double numerator=0;
-            double denominator=0;
+    public int wrtBOne(){
+            int result=0;
+            int numerator=0;
+            int denominator=0;
             //System.out.println("S "+ds_X.size()+" sumXiYi "+sumXiYi()+" sumXi "+sumXi()+" sumYi "+sumYi()+" sumPowerXi "+sumPowerXi());
-            numerator=ds_X.size()*sumXiYi()-((sumXi()*sumYi()));
-            denominator=(ds_X.size()*sumPowerXi())-(sumXi()*sumXi());
-            result=numerator/denominator;
+            numerator=ds_X.size()*sumXiYi()-sumXi()*sumYi();
+            denominator=ds_X.size()*sumPowerXi()-sumXi()*sumXi();
+            //int d1=denominator/numerator;
+
+            //System.out.println("n "+numerator+" d "+denominator+"n "+d1);
+            result=denominator/numerator;
             
             return result;
     }
-    public double wrtBZero(){
-            double result=0;
-            double numerator=0;
-            double denominator=0;
+    public int wrtBZero(){
+            int result=0;
+            int numerator=0;
+            int denominator=0;
             
-            numerator=sumYi()-(wrtBOne()*sumXi());
+            numerator=(sumYi()-wrtBOne()*sumXi())*-1;
             denominator=ds_X.size();
+            System.out.println("n "+numerator+" d "+denominator);
             result=numerator/denominator;
             return result;
     }
@@ -133,9 +137,9 @@ public class SLR{
     }
 
 public static void main(String[]args){
-        double dt0=0;
-        double dt1=0;
-        double pre=0;
+        int dt0=0;
+        int dt1=0;
+        int pre=0;
         SLR obj1=new SLR();
         System.out.println("x "+obj1.sumXi());
         System.out.println("y "+obj1.sumYi());
@@ -145,7 +149,7 @@ public static void main(String[]args){
         dt0=obj1.wrtBZero();
         dt1=obj1.wrtBOne();
         System.out.println("B0 "+dt0+" B1 "+dt1);
-        pre=dt0+(dt1*1518);
+        pre=dt0+(dt1*58);
         System.out.println("y "+pre);
 }
 
