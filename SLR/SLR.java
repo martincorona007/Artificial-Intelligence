@@ -17,10 +17,11 @@ public class SLR{
             //System.out.println("S "+ds_X.size()+" sumXiYi "+sumXiYi()+" sumXi "+sumXi()+" sumYi "+sumYi()+" sumPowerXi "+sumPowerXi());
             numerator=ds_X.size()*sumXiYi()-sumXi()*sumYi();
             denominator=ds_X.size()*sumPowerXi()-sumXi()*sumXi();
-            //int d1=denominator/numerator;
+           // int d1=numerator/denominator;
 
-            //System.out.println("n "+numerator+" d "+denominator+"n "+d1);
-            result=denominator/numerator;
+            //System.out.println("n "+numerator+" d "+denominator);
+            //System.out.println("\n\n\n");
+            result=numerator/denominator;
             
             return result;
     }
@@ -29,9 +30,14 @@ public class SLR{
             int numerator=0;
             int denominator=0;
             
-            numerator=(sumYi()-wrtBOne()*sumXi())*-1;
-            denominator=ds_X.size();
-            System.out.println("n "+numerator+" d "+denominator);
+            numerator=sumPowerXi()*sumYi()-sumXi()*sumXiYi();
+            denominator=ds_X.size()*sumPowerXi()-sumXi()*sumXi();
+            //double d1=denominator/numerator;
+           // double d2=numerator/denominator;
+           // System.out.println("S "+ds_X.size()+" sumXiYi "+sumXiYi()+" sumXi "+sumXi()+" sumYi "+sumYi()+" sumPowerXi "+sumPowerXi());
+           
+            //System.out.println("n "+numerator+" d "+denominator+" n1 "+d1+" n2 "+d2);
+            //System.out.println("\n\n\n");
             result=numerator/denominator;
             return result;
     }
@@ -65,74 +71,41 @@ public class SLR{
         return val;
     }
     public void addData(){
-        /*ds_X.add(1);
-        ds_X.add(2);
-        ds_X.add(4);
-        ds_X.add(3);
-        ds_X.add(5);
-        
-        ds_Y.add(1);
-        ds_Y.add(3);
-        ds_Y.add(3);
-        ds_Y.add(2);
-        ds_Y.add(5);*/
-        
-        /*ds_X.add(2);
-        ds_X.add(4);
-        ds_X.add(6);
-        ds_X.add(8);
-        
-        ds_Y.add(3);
-        ds_Y.add(7);
-        ds_Y.add(5);
-        ds_Y.add(10);
-        */
-        
-
-       /* ds_X.add(43);
+        /*ds_X.add(43);
         ds_X.add(21);
         ds_X.add(25);
         ds_X.add(42);
         ds_X.add(57);
         ds_X.add(59);
-
+        
         ds_Y.add(99);
         ds_Y.add(65);
         ds_Y.add(79);
         ds_Y.add(75);
         ds_Y.add(87);
-        ds_Y.add(81);*/
-        /*ds_X.add(1);
-        ds_X.add(2);
-        ds_X.add(2);
-        ds_X.add(3);
-        
-        ds_Y.add(1);
-        ds_Y.add(2);
-        ds_Y.add(3);
-        ds_Y.add(6);
-        */
-        
-        ds_X.add(651);
-        ds_X.add(762);
-        ds_X.add(856);
-        ds_X.add(1063);
-        ds_X.add(1190);
-        ds_X.add(1298);
-        ds_X.add(1421);
-        ds_X.add(1440);
-        ds_X.add(1518);
+        ds_Y.add(81);
+       */ 
+       
+        ds_Y.add(651);
+        ds_Y.add(762);
+        ds_Y.add(856);
+        ds_Y.add(1063);
+        ds_Y.add(1190);
+        ds_Y.add(1298);
+        ds_Y.add(1421);
+        ds_Y.add(1440);
+        ds_Y.add(1518);
 
-        ds_Y.add(23);
-        ds_Y.add(26);
-        ds_Y.add(30);
-        ds_Y.add(34);
-        ds_Y.add(43);
-        ds_Y.add(48);
-        ds_Y.add(52);
-        ds_Y.add(57);
-        ds_Y.add(58);
-        
+        ds_X.add(23);
+        ds_X.add(26);
+        ds_X.add(30);
+        ds_X.add(34);
+        ds_X.add(43);
+        ds_X.add(48);
+        ds_X.add(52);
+        ds_X.add(57);
+        ds_X.add(58);
+    
        
     }
 
@@ -145,11 +118,11 @@ public static void main(String[]args){
         System.out.println("y "+obj1.sumYi());
         System.out.println("xy "+obj1.sumXiYi());
         System.out.println("x2 "+obj1.sumPowerXi());
-        //obj1.SLR();
+        
         dt0=obj1.wrtBZero();
         dt1=obj1.wrtBOne();
         System.out.println("B0 "+dt0+" B1 "+dt1);
-        pre=dt0+(dt1*58);
+        pre=dt0+(dt1*57);
         System.out.println("y "+pre);
 }
 

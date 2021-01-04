@@ -160,9 +160,18 @@ public class MLR{
         ds_Yi.add(330.7);
         ds_Yi.add(349.0);
     }
+    public void print(){
+        double val=0;
+        int j=1;
+        for(int i=0;i<ds_Xi1.size();i++){
+            val=wrtBzero()+(wrtBone()*ds_Xi1.get(i))+(wrtBtwo()*ds_Xi2.get(i));
+           System.out.println("i "+j+" y "+val);
+           j++;  
+        }
+    }
     public static void main(String[]args){
         MLR obj1=new MLR();
-        double x1=71.1;
+        double x1=41.9;
         double x2=32.1;
         double val=0;
         System.out.println("xi1 "+obj1.sumXi1());
@@ -180,7 +189,8 @@ public class MLR{
         System.out.println("+B0 "+obj1.wrtBzero());
         System.out.println("+B1 "+obj1.wrtBone());
         System.out.println("+B2 "+obj1.wrtBtwo());
-        val=obj1.wrtBzero()+(obj1.wrtBone()*x1)+(obj1.wrtBtwo()*x2);
-        System.out.println("y "+val);
+        //val=obj1.wrtBzero()+(obj1.wrtBone()*x1)+(obj1.wrtBtwo()*x2);
+        obj1.print();
+        //System.out.println("y "+val);
     }
 }
