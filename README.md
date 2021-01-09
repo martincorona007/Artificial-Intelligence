@@ -11,12 +11,12 @@
 ## SLR with JADE ##
 Inside JADE folder.
 1. ```javac -cp lib/jade.jar  src/examples/slr/SLR.java src/examples/slr/SLRAgent.java src/examples/slr/SLRGui.java -d classes/```
-2. ```java -cp lib/jade.jar:classes/ jade.Boot -gui boki:examples.slr.SLRAgent```
+2. ```java -cp lib/jade.jar:classes/ jade.Boot -gui agente:examples.slr.SLRAgent```
 
 ## MLR with JADE ##
 Inside JADE folder.
 1. ```javac -cp lib/jade.jar  src/examples/mlr/MLR.java src/examples/mlr/MLRAgent.java src/examples/mlr/MLRGui.java -d classes/```
-2. ```java -cp lib/jade.jar:classes/ jade.Boot -gui boki:examples.mlr.MLRAgent```
+2. ```java -cp lib/jade.jar:classes/ jade.Boot -gui agente:examples.mlr.MLRAgent```
 
 ## Representation ##
 ![Screenshot from 2020-12-16 12-52-31 (copy)](https://user-images.githubusercontent.com/31390537/102525833-70e49a00-4060-11eb-8b30-6ebb49a376ec.png)
