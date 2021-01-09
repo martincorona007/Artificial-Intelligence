@@ -14,9 +14,9 @@ import jade.domain.FIPAAgentManagement.ServiceDescription;
 public class SLRAgent extends Agent{
     private SLRGui myGui;
     public SLR obj1;
-    double dt0=0;
-    double dt1=0;
-    double res=0;
+    int dt0=0;
+    int dt1=0;
+    int res=0;
     
     protected void setup(){
         myGui = new SLRGui(this);
