@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.lang.Math; 
+
 public class SLR{
     //ds_x data set X
     //ds_x data set Y

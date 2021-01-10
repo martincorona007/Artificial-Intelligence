@@ -34,15 +34,11 @@ public class GeneticAlgorithm{
     /*
     
     public int calculateFitness(){
-
     }
     public int selectParects(){
-
     }
     public void getPopulationFitness(){
-
     }
     public int evaluatePopulation(){
-
     }*/
 }

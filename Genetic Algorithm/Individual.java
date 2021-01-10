@@ -49,14 +49,10 @@ public class Individual{
 
     }
     /*public int getLength(){
-
     }
     public int getChromosome(){
-
     }
-
     public int getFitness(){
-
     }
 */
 }

@@ -40,7 +40,6 @@ public class Population{
     }*/
   /*  public Individual getIndividual(){
         
-
     }
 */
 
@@ -52,16 +51,12 @@ public class Population{
 
 
     /*public void setIndividual(){
-
     }
-
     
     public int getFitness(){
-
     }
     
     public int getSize(){
-
     }*/
 
 }

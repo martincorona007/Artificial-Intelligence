@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-
 public class Main{
     public static void main(String[]args){
         GeneticAlgorithm obj_ga=new GeneticAlgorithm(100,0,0,0);
@@ -8,5 +6,4 @@ public class Main{
             //obj_pop.print();
             //System.out.println("nope");
         }
-    }
-}
+   
