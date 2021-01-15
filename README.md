@@ -2,28 +2,28 @@
 
 ## How to compile ##
 
-## SLR Hands-on 2##
+## SLR Hands-on 2 ##
 (Inside SLR Folder)
 1. ```javac SLR.java```
 2. ```java SLR```
-## MLR Hands-on 4##
+## MLR Hands-on 4 ##
 (Inside MLR Folder)
 1. ```javac MLR.java```
 2. ```java MLR```
-## Genetic Algorithm Hands-on 6##
+## Genetic Algorithm Hands-on 6 ##
 (Inside Genetic Algorithm Folder)
 1. ```javac Main.java```
 2. ```java Main```
 
-## SLR with JADE Hands-on 3##
+## SLR with JADE Hands-on 3 ##
 (Inside JADE folder)
 1. ```javac -cp lib/jade.jar  src/examples/slr/SLR.java src/examples/slr/SLRAgent.java src/examples/slr/SLRGui.java -d classes/```
 2. ```java -cp lib/jade.jar:classes/ jade.Boot -gui agente:examples.slr.SLRAgent```
-## MLR with JADE Hands-on 5##
+## MLR with JADE Hands-on 5 ##
 (Inside JADE folder)
 1. ```javac -cp lib/jade.jar  src/examples/mlr/MLR.java src/examples/mlr/MLRAgent.java src/examples/mlr/MLRGui.java -d classes/```
 2. ```java -cp lib/jade.jar:classes/ jade.Boot -gui agente:examples.mlr.MLRAgent```
-## Genetic Algorithm  with JADE Hands-on 7##
+## Genetic Algorithm  with JADE Hands-on 7 ##
 (Inside JADE folder)
 1. ```javac -cp lib/jade.jar src/examples/H7/Population.java src/examples/H7/Individual.java src/examples/H7/GeneticAlgorithm.java src/examples/H7/Main.java -d classes/```
 2. ```java -cp lib/jade.jar:classes/ jade.Boot -gui agente:examples.H7.Main```
